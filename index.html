@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Vizzz</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="bubbles-container">
+
+    </div>
+    <div class="mute">
+        <span></span><span></span><span></span>
+    </div>
+    <div id="music-container">
+        <audio id="audio" src="stream-audio.mp3" autoplay loop></audio>
+    </div>
+    <div id="slide-indicator">
+        <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 8L7.5 1L14.5 8" stroke="#99B2B7"/>
+        </svg>
+        <div><span id="num-indi">1</span>/5</div>
+        <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 1L7.5 8L14.5 1" stroke="#99B2B7"/>
+        </svg>
+
+    </div>
+    <div id="bg-container">
+        <img id="bg-img" src="bg.svg" alt="">
+    </div>
+    <div class="slab-3" id="guide">Click a fish to enable audio</div>
+
+    <section id="landing">
+
+        <div class="landing-text">
+            <div class="slab-1 landing-eyebrow">Choose Your Own Adventure</div>
+
+            <div class="serif-1">Which fish in the Chesapeake Bay are you?</div>
+        </div>
+        <div class="button-container top-layer">
+            <div class="button-row">
+                <div class="fish-button">
+                    <img src="reddrum.png" alt="">
+                    <p class="slab-1">Red Drum</p>
+                </div>
+                <div class="fish-button">
+                    <img src="summerflounder.png" alt="">
+                    <p class="slab-1">Summer Flounder</p>
+
+                </div>
+                <div class="fish-button">
+                    <img src="spottedseatrout.png" alt="">
+                    <p class="slab-1">Spotted Seatrout</p>
+
+                </div>
+            </div>
+            <div class="button-row">
+                <div class="fish-button">
+                    <img src="stripedbass.png" alt="">
+                    <p class="slab-1">Striped Bass</p>
+
+                </div>
+                <div class="fish-button">
+                    <img src="whiteperch.png" alt="">
+                    <p class="slab-1">White Perch</p>
+
+                </div>
+            </div>
+        </div>
+        <!--<div id="fish-info">
+            <div class="slab-1" id="fish-info-title">Red Drum</div>
+            <div class="slab-3" id="aka">also known as redfish, channel bass, puppy drum,  or spottail bass</div>
+                <div class="slab-2"><span class="bold">Preferred temperature: </span><span id="pref-temp">70°F - 90°F</span></div>
+        </div>-->
+
+    </section>
+
+    <div id="scrollDist">
+
+        <section class="slide slide-1">
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-header-item">
+                        <div class="serif-2 slide-display">We analyzed almost 130 streams in the Chesapeake Bay over 60
+                            years to visualize how the changes in stream temperature impact these fishes’ quality of life.
+                        </div>
+                        <div class="slab-2 slide-para">Each satellite image is of a stream that our data has recorded
+                            its changes over 60 years. They are then color-coded on how much the temperature has changed
+                            over time.</div>
+                    </div>
+                    <div id="slide-1-legend" class="sat-item">
+                        <div class="slab-1">Legend</div>
+                        <div class="sat-img">
+                            <div class="sat-desc">
+                                <div class="slab-2">Latitude</div>
+                                <div class="serif-4">Change in temperature</div>
+                                <div class="slab-2">Longitude</div>
+                            </div>
+                            <img src="slide-1-legend.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide-body">
+                    <div class="sat-item">
+
+                        <div class="sat-img">
+                            <div class="sat-desc below">
+                                <div class="slab-2">39.879° N</div>
+                                <div class="serif-3">-5.4432° ↓</div>
+                                <div class="slab-2">76.853° W</div>
+                            </div>
+                            <img src="sat-below-1.png" alt="">
+                        </div>
+                        <div class="slab-1 white">-7° ↓ to -1° ↓</div>
+                    </div>
+                    <div class="sat-item">
+                        <div class="sat-img">
+                            <div class="sat-desc between">
+                                <div class="slab-2">41.474° N</div>
+                                <div class="serif-3">-0.486° ↓</div>
+                                <div class="slab-2">77.231° W</div>
+                            </div>
+                            <img src="sat-between-1.png" alt="">
+                        </div>
+                        <div class="slab-1 white">-1° ↓ to 1° ↑</div>
+                        <div class="slab-2 white ">Statistically Insignificant</div>
+
+                    </div>
+                    <div class="sat-item">
+                        <div class="sat-img">
+                            <div class="sat-desc above">
+                                <div class="slab-2">40.485° N</div>
+                                <div class="serif-3">2.916° ↑</div>
+                                <div class="slab-2">78.019° W</div>
+                            </div>
+                            <img src="sat-above-1.png" alt="">
+                        </div>
+                        <div class="slab-1 white">1° ↑ to 7° ↑</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide slide-2">
+            <div class="content">
+                <div class="slide-header">
+
+                    <div class="serif-1 slide-display">You chose <span id="selec-fish-1">fish-placeholder</span>. You would have probably died. </div>
+                    <div class="slab-2 slide-para">
+                        <p><span id="selec-fish-2">fish-placeholder</span> is commonly found in this area in Chesapeake Bay that
+                            exhibits a significant decrease in temperature.</p>
+                        <p><span id="selec-fish-3">fish-placeholder</span> has temperature preference between 70° and 90° and would
+                            stop feeding altogether when it gets too cold. </p>
+                    </div>
+                    <img id="fish-pic" src="reddrum.png" alt="">
+
+
+
+                </div>
+                <div class="slide-body">
+                    <div class="sat-img">
+                        <div class="sat-desc below">
+                            <div class="slab-2">41.474° N</div>
+                            <div class="serif-2">-0.486° ↓</div>
+                            <div class="slab-2">77.231° W</div>
+                        </div>
+                        <img src="sat-below-2.png" alt="">
+
+                    </div>
+                    <div class="graph-title slab-2 white"><span class="bold">Fig 1: </span>Satellite image of a stream using its coordinates in Chesapeake Bay, where you can find Red Drum fish and its changes in stream water temperatures from 1960–2014.</div>
+                </div>
+            </div>
+        </section>
+        <section class="slide slide-3">
+            <div class="content">
+                <div class="slide-header">
+
+                    <div class="serif-1 slide-display">Throughout the Chesapeake Bay, </div>
+                    <div class="slab-2 slide-para">
+                        <p>Multiple streams experience a wide range in temperature increase or decrease, with some experience up to 7.875° increase in temperature.</p>
+                        <p>As rising air temperatures cause stream temperatures to rise, warmer stream water coming into the bay can stress plants and animals and worsen the effects of nutrient pollution that the bay is already facing.</p>
+                    </div>
+                    
+
+
+
+                </div>
+                <div class="slide-body">
+                    <div class="graph-title slab-2"><span class="bold">Fig 2: </span>Satellite images of selected streams using its coordinates in Chesapeake Bay,  and their changes in stream water temperatures from 1960–2014.</div>
+                    <div class="fig-container">
+                        <div class="sat-img">
+                            <div class="sat-desc above size-2">
+                                <div class="slab-2">36.939° N</div>
+                                <div class="serif-2">2.041° ↑</div>
+                                <div class="slab-2">80.887° W</div>
+                            </div>
+                            <img src="sat-above-2.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc above size-1">
+                                <div class="slab-2">40.018° N</div>
+                                <div class="serif-3">1.361° ↑</div>
+                                <div class="slab-2">79.593° W</div>
+                            </div>
+                            <img src="sat-above-3.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc between size-1">
+                                <div class="slab-2">38.335° N</div>
+                                <div class="serif-3">0.778° ↑</div>
+                                <div class="slab-2">79.239° W</div>
+                            </div>
+                            <img src="sat-between-2.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc below size-3">
+                                <div class="slab-2">40.463° N</div>
+                                <div class="serif-3">-7.873° ↓</div>
+                                <div class="slab-2">78.2° W</div>
+                            </div>
+                            <img src="sat-below-4.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc above size-3">
+                                <div class="slab-2">37.436° N</div>
+                                <div class="serif-3">7.875° ↑</div>
+                                <div class="slab-2">77.061° W</div>
+                            </div>
+                            <img src="sat-above-4.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc between size-1">
+                                <div class="slab-2">38.906° N</div>
+                                <div class="serif-3">0.292° ↑</div>
+                                <div class="slab-2">75.513° W</div>
+                            </div>
+                            <img src="sat-between-3.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc below size-1">
+                                <div class="slab-2">41.32° N</div>
+                                <div class="serif-3">-1.652° ↓</div>
+                                <div class="slab-2">77.874° W</div>
+                            </div>
+                            <img src="sat-below-5.png" alt="">
+    
+                        </div>
+                        <div class="sat-img">
+                            <div class="sat-desc below size-1">
+                                <div class="slab-2">41.359° N</div>
+                                <div class="serif-3">-1.664° ↓</div>
+                                <div class="slab-2">75.744° W</div>
+                            </div>
+                            <img src="sat-below-6.png" alt="">
+    
+                        </div>
+                    </div>
+                </div>
+                <div id="slide-3-legend">
+                    <div class="slab-2 legend-title">Difference in temperature(°F)</div>
+                    <div class="gradient-block gra-red"></div>
+                    <div class="gradient-block gra-blue"></div>
+                    <div class="gradient-block gra-yel"></div>
+                    <div class="legend-units">
+                        <div class="slab-1">7° ↑</div>
+                        <div class="slab-1">1° ↑</div>
+                        <div class="slab-1 white">-1° ↓</div>
+                        <div class="slab-1 white">-7° ↓</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide slide-4">
+            <div class="content">
+                <div class="slide-header">
+
+                    <div class="serif-1 slide-display">On a side note, in the Snake River,</div>
+                    <div class="slab-2 header-para">Warming river and stream temperatures will threaten ecosystems and species, including salmon populations.</div>
+                    <img src="salmon.png" alt="" class="salmon">
+                    <p class="slab-1 white">Snake River Salmon</p>
+
+                    <div class="slab-2 slide-para white">
+                        <p>Salmon play a particularly important role in the diet, culture, religion, and economy of Native Americans in this region.</p>
+                        <p>Warmer water can negatively affect fish, making it more difficult for them to swim upstream. It can also make fish more susceptible to disease. </p>
+                    </div>
+                    
+
+
+
+                </div>
+                <div class="slide-body">
+                    <div class="fig-3">
+                        <img src="fig3.png" alt="">
+                        <div class="graph-title slab-2 white"><span class="bold">Fig 1: </span>Satellite image of a stream using its coordinates in Chesapeake Bay, where you can find Red Drum fish and its changes in stream water temperatures from 1960–2014.</div>
+
+                    </div>
+                    <div id="slide-4-legend">
+                        <div class="slab-2 legend-title">Avg. August Temperature(°F)</div>
+                        <div class="grad-cont">
+                            <div class="gradient-block"></div>
+                            <div class="gradient-block"></div>
+                            <div class="gradient-block"></div>
+                            <div class="gradient-block"></div>
+                            <div class="gradient-block"></div>
+                            <div class="gradient-block"></div>
+                        </div>
+                        
+                        <div class="legend-units">
+                            <div class="slab-1">74.4°</div>
+                            <div class="slab-1 white">72.9°</div>
+                            <div class="slab-1 white">72°</div>
+                            <div class="slab-1 white">71.7°</div>
+                            <div class="slab-1 white">71.1°</div>
+                            <div class="slab-1 white">70.3°</div>
+                            <div class="slab-1 white">67°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="slide slide-5">
+            <div class="content">
+                <div class="slide-header">
+
+                    <div class="serif-1">Start over?</div>
+                    <button class="restart-btn slab-2" onclick="location.reload();">Click Here</button>
+                    <div class="serif-3">
+                        However, there is no restart button for our planet, the Chesapeake Bay, or our friend, the Red Drum.
+                    </div>
+                    <div class="slab-2 ">
+                        Learn more how you can help and educate yourself on climate change issues.
+                    </div>
+                    <div class="slab-3"><span class="bold">Sources: </span>Trends in Stream Temperature in the Snake River <a href="" target="_blank" rel="noopener noreferrer" class="white bold">[1]</a></div>
+                    <div class="slab-3">Stream Temperature in the Chesapeake Bay<a class="white bold" target="_blank" rel="noopener noreferrer" href="">[2]</a></div>
+
+
+
+
+                </div>
+                <div class="slide-body">
+
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <!-- partial -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js'></script>
+    <!--<script  src="./sketch1.js"></script>-->
+    <script src="./script.js"></script>
+</body>
