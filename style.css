@@ -863,3 +863,33 @@ align-items: center;
 
 .grad-cont .gradient-block:nth-child(6){
     background: linear-gradient(0deg, #948C75 0%, #D9CEB2 100%);}
+
+.mobile-screen{
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    position: absolute;
+    background-color: #231F20;
+    color: #E9E9E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .mobile-screen{
+        visibility: visible;
+        z-index: 200;
+        opacity: 1;
+
+    }
+
+    .bubbles-container{
+        z-index: 201;
+    }
+    .bubbles-container span{
+        border: 1px solid #E9E9E9;
+
+    }
+}
